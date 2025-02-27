@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vehicle Make Selection</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 700px;
+            margin-top: 50px;
+        }
+        .progress {
+            height: 8px;
+        }
+        .progress-bar {
+            background-color: #519bad;
+        }
+        .make-option {
+            border: 2px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            background-color: #fff;
+        }
+        .make-option img {
+            max-width: 80px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .make-option:hover, .make-option.selected {
+            border-color: #519bad;
+            background-color: #e8f0f3;
+        }
+        .btn-back {
+            background-color: #fff;
+            border: 1px solid #519bad;
+            color: #519bad;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .security-text {
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container text-center">
+        <!-- Progress Bar -->
+        <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <!-- Title -->
+        <h3 class="fw-bold">What is the make of your vehicle? <i class="bi bi-info-circle"></i></h3>
+
+        <!-- Vehicle Makes -->
+        <div class="row mt-4">
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="Ford">
+                    <p>Ford</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="Toyota">
+                    <p>Toyota</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="Nissan">
+                    <p>Nissan</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="Chevrolet">
+                    <p>Chevrolet</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="Honda">
+                    <p>Honda</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="Dodge">
+                    <p>Dodge</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="Jeep">
+                    <p>Jeep</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="Kia">
+                    <p>Kia</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="Hyundai">
+                    <p>Hyundai</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="Chrysler">
+                    <p>Chrysler</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="BMW">
+                    <p>BMW</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="make-option" onclick="selectMake(this)">
+                    <img src="https://via.placeholder.com/80x40" alt="Volkswagen">
+                    <p>Volkswagen</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Show More Button -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <button class="btn btn-link">Show more</button>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="row mt-2">
+            <div class="col-12">
+                <button class="btn btn-back">Back</button>
+            </div>
+        </div>
+
+        <!-- Security Message -->
+        <p class="security-text mt-3">🔒 Your information is secured</p>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript to Highlight Selected Make -->
+    <script>
+        function selectMake(element) {
+            document.querySelectorAll('.make-option').forEach(item => {
+                item.classList.remove('selected');
+            });
+            element.classList.add('selected');
+        }
+    </script>
+
+</body>
+</html>
