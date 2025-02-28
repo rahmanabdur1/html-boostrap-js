@@ -4,79 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vehicle Year Selection</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            max-width: 700px;
-            margin-top: 50px;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
         }
+        .progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.progress-percentage {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adjust spacing between text and progress bar */
+}
+
         .progress {
-            height: 8px;
+            width: 60%;
+            height: 14px;
+            background-color: #ddd;
+            border-radius: 7px;
+            overflow: hidden;
+            position: relative;
         }
         .progress-bar {
+            width: 15%; /* Set progress to 15% */
+            height: 100%;
             background-color: #519bad;
+            transition: width 0.3s ease-in-out;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 27px; /* Horizontal gap */
+            row-gap: 17px; /* Vertical gap */
+            justify-items: center;
+            margin-top: 20px;
         }
         .year-btn {
             width: 100%;
-            padding: 15px 20px;
+            padding: 23px 40px;
             font-size: 16px;
             font-weight: bold;
-            border-radius: 2px;
+            border-radius: 5px;
             border: 1px solid #ddd;
             background-color: #fff;
             transition: all 0.3s ease;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            box-shadow: 2px 5px 10px rgba(0, 0, 6, 0.1);
+            cursor: pointer;
         }
-   
         .lock-icon {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 20px;
-            color: #6c757d;
-            font-size: 14px;
+            margin-top: 20px;       
+            color: #519bad;
+        }
+        .lock-icon i {
+            margin-right: 8px;
+        }
+        .lock-icon span {
+            color: #737373;
+            font-size: 13px;
+        }
+        h3 {
+            padding: 14px;
+            font-weight: 700;
+            font-size: 1.57em;
         }
     </style>
 </head>
 <body>
-
-    <div class="container text-center">
-        <div class="progress mb-4">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="container">
+        <div class="progress-container">
+            <span class="progress-percentage">15%</span>
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div>
         </div>
-
-        <!-- Question -->
-        <h3 class="mb-4 fw-bold">What year is your vehicle?</h3>
-
-        <!-- Vehicle Year Selection Grid -->
-        <div class="row g-3">
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2025</button></div>
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2024</button></div>
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2023</button></div>
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2022</button></div>
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2021</button></div>
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2020</button></div>
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2019</button></div>
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2018</button></div>
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2017</button></div>
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2016</button></div>
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2015</button></div>
-            <div class="col-6 col-md-4"><button class="btn btn-light year-btn">2014</button></div>
+        
+        <h3>What year is your vehicle?</h3>
+        <div class="grid">
+            <button class="year-btn">2025</button>
+            <button class="year-btn">2024</button>
+            <button class="year-btn">2023</button>
+            <button class="year-btn">2022</button>
+            <button class="year-btn">2021</button>
+            <button class="year-btn">2020</button>
+            <button class="year-btn">2019</button>
+            <button class="year-btn">2018</button>
+            <button class="year-btn">2017</button>
+            <button class="year-btn">2016</button>
+            <button class="year-btn">2015</button>
+            <button class="year-btn">2014</button>
         </div>
-
-        <!-- Security Notice -->
-        <div class="lock-icon mt-3">
-            <span>🔒 Your information is secured</span>
+        <div class="lock-icon">
+            <i class="fas fa-lock"></i> <span>Your information is secured</span>
         </div>
     </div>
-
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
